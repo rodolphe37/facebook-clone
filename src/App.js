@@ -1,11 +1,20 @@
 import React from 'react';
 import './App.css';
+import Header from './components/header/Header';
 
 function App() {
   // BEM naming convention
   return (
-    <div className="App">
-      <h1>HELLO</h1>
+    <div className="app">
+      {/*Header */}
+      <Header />
+      {/*App body */}
+
+      {/*Sidebar */}
+
+      {/*Feed */}
+
+      {/*Widgets */}
     </div>
   );
 }
