@@ -2,11 +2,19 @@ import { Button } from '@material-ui/core';
 import React from 'react';
 import './login.css';
 import { auth, provider } from '../../firebase'
+import { useStateValue } from '../../StateProvider';
+import { actionTypes } from '../../reducer';
 
 function Login() {
+  // eslint-disable-next-line
+  const [{ }, dispatch] = useStateValue();
   const signIn = () => {
     // sign in...
     auth.signInWithPopup(provider).then(result => {
+      dispatch({
+        type: actionTypes.SET_USER,
+        user: result.user
+      })
       console.log(result.user)
     })
       .catch((error) => alert(error.message))

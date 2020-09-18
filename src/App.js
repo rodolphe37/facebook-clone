@@ -5,9 +5,11 @@ import Header from './components/header/Header';
 import Login from './components/login/Login';
 import Sidebar from './components/sidebar/Sidebar';
 import Widgets from './components/widgets/Widgets';
+import { useStateValue } from './StateProvider';
 
 function App() {
-  const user = null
+  // eslint-disable-next-line
+  const [{ user }, dispatch] = useStateValue();
   // BEM naming convention
   return (
     <div className="app">
