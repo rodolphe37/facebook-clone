@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
+import Feed from './components/feed/Feed';
 import Header from './components/header/Header';
+import Sidebar from './components/sidebar/Sidebar';
 
 function App() {
   // BEM naming convention
@@ -9,12 +11,12 @@ function App() {
       {/*Header */}
       <Header />
       {/*App body */}
-
-      {/*Sidebar */}
-
-      {/*Feed */}
-
-      {/*Widgets */}
+      <div className="app__body">
+        <Sidebar />
+        {/*Feed */}
+        <Feed />
+        {/*Widgets */}
+      </div>
     </div>
   );
 }

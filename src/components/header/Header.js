@@ -14,11 +14,11 @@ function Header() {
         />
         <div className="header__input">
           <Search />
-          <input type="text" />
+          <input type="text" placeholder="Search Facebook" />
         </div>
       </div>
       <div className="header__middle">
-        <div className="header__option">
+        <div className="header__option--active">
           <Home fontSize="large" />
         </div>
         <div className="header__option">
